@@ -29,7 +29,7 @@ app.use((req,res,next)=>{
 })
 
 app.get('/authority/login', authority.login);
-//app.post('/authority/signup', authority.signup);
+app.post('/authority/signup', authority.signup);
 app.get('/airlines/login', airlines.login);
 app.get('/passenger/:id', passenger.show);
 app.get('/authority/:id', authority.show);
