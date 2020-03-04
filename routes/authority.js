@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 
 
 
-exports.show = function(req, res) {
+/*exports.show = function(req, res) {
     var id = req.params.id;
     Traveller.findById(id).exec().then(doc=>{
       if(doc) {
@@ -17,11 +17,13 @@ exports.show = function(req, res) {
     }).catch(err=>{
       res.status(500).json({ message: "Error loading to database." + err});
     })
-  }
+  }*/
 
 exports.login = function(req, res) {
-  var email = req.body.email;
-  var password = req.body.password;
+  var Email = req.query.email;
+  var Password= req.query.password;
+  let email = Email.toString();
+  let password = Password.toString();
   let query={"email":email};
   User.find(query).exec().then(user=>{
     if(user.length<1){
@@ -41,7 +43,7 @@ exports.login = function(req, res) {
   })
 }
 
-exports.signup = function (req,res){
+/*exports.signup = function (req,res){
   User.find({ email: req.body.email}).exec().then(user=>{
     if (user.length >=1){
       return res.status(409).json({ message: "Mail exists"});
@@ -69,7 +71,7 @@ exports.signup = function (req,res){
 })
     }
   });
-}
+}*/
 
   exports.create = function(req, res) {
     var traveller_name = req.body.traveller_name;
