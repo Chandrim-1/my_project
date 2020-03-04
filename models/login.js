@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema= mongoose.Schema;
 var logInSchema=new Schema({
     email: String,
-    password: String,
+    password: String
 })
 //create model
 const User = mongoose.model("login", logInSchema);
