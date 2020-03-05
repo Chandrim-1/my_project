@@ -1,7 +1,7 @@
 var Traveller = require('../models/traveller').traveller;
 exports.show = function(req, res) {
     var luggage_name = req.params.id;
-    Traveller.find({}).select('traveller_name luggage_condition').exec().then(doc=>{
+    Traveller.find({luggage_name}).select('traveller_name luggage_condition').exec().then(doc=>{
       if(doc.length>0) {
         res.status(200).json(doc);
       }
