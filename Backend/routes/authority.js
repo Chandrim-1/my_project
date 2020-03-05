@@ -43,7 +43,7 @@ exports.login = function(req, res) {
   })
 }
 
-/*exports.signup = function (req,res){
+exports.signup = function (req,res){
   User.find({ email: req.body.email}).exec().then(user=>{
     if (user.length >=1){
       return res.status(409).json({ message: "Mail exists"});
@@ -71,7 +71,7 @@ exports.login = function(req, res) {
 })
     }
   });
-}*/
+}
 
   exports.create = function(req, res) {
     var traveller_name = req.body.traveller_name;
