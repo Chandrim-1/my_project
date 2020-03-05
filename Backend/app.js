@@ -30,10 +30,10 @@ app.use((req,res,next)=>{
 
 app.post('/authority/login', authority.login);
 //app.post('/authority/signup', authority.signup);
-app.get('/airlines/login', airlines.login);
-app.get('/passenger/:id', passenger.show);
+app.post('/airlines/login', airlines.login);
+app.post('/passenger/:id', passenger.show);
 //app.get('/authority/:id', authority.show);
-app.get('/insurance/:id', insurance.show);
+app.post('/insurance/:id', insurance.show);
 //app.get('/airlines', airlines.show);
 app.put('/airlines/load',airlines.load_update);
 app.put('/airlines/unload',airlines.unload_update);
