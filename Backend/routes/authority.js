@@ -60,8 +60,8 @@ exports.signup = function (req,res){
   authority_signup.email = email;
   authority_signup.password = password;
 
-  authority_signup.save(function(err) {
-    if(!err) {
+  authority_signup.save().then(doc=>{
+    if(doc) {
       res.status(201).json({message: "database created with email: " +authority_signup.email });   
     } else {
       res.status(500).json({message: "Could not insert data.Error: " + err});
