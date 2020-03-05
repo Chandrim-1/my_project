@@ -28,7 +28,7 @@ app.use((req,res,next)=>{
     next();
 })
 
-app.get('/authority/login', authority.login);
+app.post('/authority/login', authority.login);
 //app.post('/authority/signup', authority.signup);
 app.get('/airlines/login', airlines.login);
 app.get('/passenger/:id', passenger.show);
