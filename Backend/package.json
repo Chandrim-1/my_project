@@ -23,7 +23,7 @@
     "multer-gridfs-storage": "^4.0.2",
     "nodemailer": "^6.4.2",
     "promise": "^8.0.3",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "validator": "^12.2.0",
     "yargs": "^15.1.0"
   },
