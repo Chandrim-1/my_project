@@ -24,7 +24,7 @@
     "nodemailer": "^6.4.2",
     "promise": "^8.0.3",
     "pug": "^2.0.4",
-    "validator": "^12.2.0",
+    "validator": "^13.7.0",
     "yargs": "^15.1.0"
   },
   "description": "mongodb",
